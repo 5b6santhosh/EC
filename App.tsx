@@ -13,6 +13,10 @@ export const App = () => {
     console.warn('callback from parent triggered', e);
   };
 
+  const add = () => {
+    alert('s');
+  };
+
   return (
     <div className="p-2">
       <h1>React TSX Starter</h1>
@@ -29,7 +33,13 @@ export const App = () => {
       </div>
 
       <div className="form-group">
-        <input type="button" name="" className="btn btn-primary" value="add" />
+        <input
+          type="button"
+          name=""
+          className="btn btn-primary"
+          onClick={add}
+          value="add"
+        />
       </div>
 
       <ButtonCounter name={name} onClicked={(e) => onChildClicked(e)} />
